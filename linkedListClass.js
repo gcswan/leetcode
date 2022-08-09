@@ -231,6 +231,26 @@ test.append(3)
 test.append(4)
 test.append(5)
 
+
+function printList(list) {
+  console.log('skip')
+  // create the new list up here 
+
+
+  if (list.next) {
+    printList(list.next);
+  }
+  huh.append(list.value)
+  // console.log(list.value)
+}
+
+let huh = new List();
+printList(test.head)
+
+// console.log(huh);
+
+huh.print();
+
 // console.log(test.removeFirst())
 // console.log(test.removeLast())
 
