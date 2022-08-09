@@ -216,48 +216,27 @@ class List {
 
 }
 
-function makeNode(value) {
-  return {
-    value: value, 
-    next: null
-  }
+function makeNode(value, next = null) {
+  return { value, next }
 }
 
-
-let test = new List();
-test.append(1);
-test.append(2);
-test.append(3)
-test.append(4)
-test.append(5)
-
-
-function printList(list) {
-  console.log('skip')
-  // create the new list up here 
+// class implentation of a node
+// class ListNode {
+//   constructor(val, next = null) {
+//     this.val = val;
+//     this.next = next;
+//     console.log(this)
+//   }
+// }
+// const n1 = new ListNode(1);
+// const n2 = new ListNode(2);
 
 
-  if (list.next) {
-    printList(list.next);
-  }
-  huh.append(list.value)
-  // console.log(list.value)
-}
+let list = new List();
+list.append(1);
+list.append(2);
+list.append(3)
+list.append(4)
+list.append(5)
 
-let huh = new List();
-printList(test.head)
-
-// console.log(huh);
-
-huh.print();
-
-// console.log(test.removeFirst())
-// console.log(test.removeLast())
-
-// test.insert(7, 2) 
-// test.remove(2)
-
-// test.print();
-// console.log('-------')
-
-// console.log('length:', test.getLength());
+module.exports = { list }
