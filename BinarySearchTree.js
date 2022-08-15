@@ -1,4 +1,4 @@
-class Node {
+class BST{
   constructor(val) {
     this.val = val;
     this.left = null;
@@ -47,20 +47,20 @@ class Node {
   }
 }
 
-let bst = new Node(10);
-bst.insert(8);
-bst.insert(5);
-bst.insert(12);
-bst.insert(11)
-bst.insert(15);
-bst.insert(2);
-bst.insert(9);
+let test = new BST(10);
+test.insert(8);
+test.insert(5);
+test.insert(12);
+test.insert(11)
+test.insert(15);
+test.insert(2);
+test.insert(9);
 
 // console.log('----inorder-----')
-// bst.inorder();
+// test.inorder();
 // console.log('----preorder-----')
-// bst.preorder();
+// test.preorder();
 // console.log('----postorder-----')
-// bst.postorder();
+// test.postorder();
 
 
