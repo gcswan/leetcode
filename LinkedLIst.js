@@ -239,4 +239,4 @@ list.append(3)
 list.append(4)
 list.append(5)
 
-module.exports = { list }
+module.exports = { list, List, makeNode }
