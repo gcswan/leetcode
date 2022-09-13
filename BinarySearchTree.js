@@ -7,11 +7,11 @@ class BST{
 
   insert(val) {
     if (val < this.val && !this.left) {
-      this.left = new Node(val);
+      this.left = new BST(val);
     } else if (val < this.val && this.left) {
       this.left.insert(val);
     } else if (val >= this.val && !this.right) {
-      this.right = new Node(val);
+      this.right = new BST(val);
     } else if (val >= this.val && this.right) {
       this.right.insert(val);
     }
@@ -56,11 +56,15 @@ test.insert(15);
 test.insert(2);
 test.insert(9);
 
+
+
 // console.log('----inorder-----')
 // test.inorder();
 // console.log('----preorder-----')
 // test.preorder();
 // console.log('----postorder-----')
 // test.postorder();
+
+module.exports = { test }
 
 
