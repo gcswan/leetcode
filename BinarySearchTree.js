@@ -65,6 +65,6 @@ test.insert(9);
 // console.log('----postorder-----')
 // test.postorder();
 
-module.exports = { test }
+module.exports = { BST }
 
 
