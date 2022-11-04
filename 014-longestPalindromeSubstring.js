@@ -1,7 +1,9 @@
 /**
+ * @description Given a string s, return the longest palindromic substring in s
  * @param {string} s
  * @return {string}
  */
+
  var longestPalindrome = function(s) {
     let longest = [0,0,1];
     for (let i = 0; i < s.length - 1; i++) {
