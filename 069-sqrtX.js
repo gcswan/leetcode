@@ -11,14 +11,15 @@ var mySqrt = function(x) {
   let low = 0;
   let high = x;
   let ans = -Infinity
-  while (low <=high) {
+  while (low <= high) {
     let mid = low + Math.floor((high-low)/2)
     let sqr = mid*mid
-    if (sqr < x) {
+    if (sqr <= x) {
       // we found a number that meets our criteria
       // but we are not done, we want the the number that 
       // that comes closest to the square root without 
       // going over - so keep searching to the right
+      // until boundaries break
       ans = mid
       low = mid + 1
     }
@@ -29,4 +30,4 @@ var mySqrt = function(x) {
   return ans
 };
 
-console.log(mySqrt(12))
+console.log(mySqrt(4))
