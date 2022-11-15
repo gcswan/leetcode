@@ -10,6 +10,7 @@
  */
 var subsets = function(nums) {
   result = []; 
+  nums.sort();
   var backtrack = function(start, nums, subset){
     result.push(subset.slice(0));
     for(let i = start; i < nums.length;i++){
