@@ -1,15 +1,17 @@
 const { List, makeNode } = require('./LinkedList');
 /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
+ * @description You are given two non-empty linked lists representing two 
+ * non-negative integers. The digits are stored in reverse order, and each 
+ * of their nodes contains a single digit. Add the two numbers and return 
+ * the sum as a linked list.
+ * You may assume the two numbers do not contain any leading zero, except 
+ * the number 0 itself.
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
+ * @example
+ * // returns [7,0,8]
+ * addTwoNumbers([2,4,3], [5,6,4])
  */
 var addTwoNumbers = function(l1, l2) {
   let c1 = l1;
@@ -28,7 +30,7 @@ var addTwoNumbers = function(l1, l2) {
       remainder = 1;
     } else {
       remainder = 0;
-      }
+    }
 
     // console.log('num:', sum)
     // console.log('remainder: ', remainder)
@@ -44,6 +46,16 @@ var addTwoNumbers = function(l1, l2) {
   return res.next;
 };
 
+/**
+ *
+ *   Definition for singly-linked list.
+ * 
+ *   function ListNode (val, next) {
+ *       this.val = (val===undefined ? 0 : val)
+ *       this.next = (next===undefined ? null : next)
+ *   }
+ * 
+ */
 
 const l1 = new List();
 const l2 = new List();
@@ -63,6 +75,6 @@ l4.append(9)
 l4.append(6)
 l4.append(2)
 
-const result = addTwoNumbers(l3.head, l4.head);
+const result = addTwoNumbers(l1.head, l2.head);
 
 console.log(JSON.stringify(result))
